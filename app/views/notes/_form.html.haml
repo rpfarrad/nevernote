@@ -1,7 +1,7 @@
 = form_for note do |f|
   %p
-    = f.text_field :title
+    = f.text_field :title, placeholder: t('note.placeholder.title'), autofocus: title_autofocus?(f.object)
   %p
-    = f.text_area :body_html
+    = f.bootsy_area :body_html, placeholder: t('note.placeholder.body')
   .form-actions
     = f.submit class: 'btn btn-default'

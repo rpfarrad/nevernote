@@ -22,4 +22,8 @@ module ApplicationHelper
       end.join.html_safe
     end
   end
+
+  def title_autofocus?(note)
+    note.new_record?
+  end
 end

@@ -13,6 +13,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass'
 gem 'haml'
 gem 'font-awesome-sass'
+gem 'bootsy'
 
 group :development, :test do
   gem 'pry-rails'
