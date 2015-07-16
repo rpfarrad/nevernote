@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true
   validate :passwords_match
 
+  def display_name
+    name.presence || username
+  end
+
   private
 
   def passwords_match

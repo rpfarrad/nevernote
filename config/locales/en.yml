@@ -4,3 +4,10 @@ en:
       create:
         success: "Thanks for signing up!"
         failure: "There was a problem with your registration."
+  session:
+    flash:
+      create:
+        success: "Welcome!"
+        failure: "There was a problem logging in with those credentials."
+      destroy:
+        success: "Come back soon!"
