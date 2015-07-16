@@ -24,8 +24,7 @@
           .row
             .col-xs-4
               %nav#sidebar
-                .well
-                  SIDEBAR
+                = render 'notes/list', notes: @notes
             .col-xs-8
               %main
                 .well

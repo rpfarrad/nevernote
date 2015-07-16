@@ -1,5 +1,6 @@
 class NotesController < ApplicationController
   before_action :authorize_user
+  before_action :load_notes
   before_action :find_note, only: [:show, :edit, :update, :destroy]
 
   def show
@@ -50,5 +51,9 @@ class NotesController < ApplicationController
     else
       redirect_to @note
     end
+  end
+
+  def load_notes
+    @notes = Note.all
   end
 end
