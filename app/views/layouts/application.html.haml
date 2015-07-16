@@ -27,6 +27,5 @@
                 = render 'notes/list', notes: @notes
             .col-xs-8
               %main
-                .well
-                  = flash_messages(flash)
-                  = yield
+                = flash_messages(flash)
+                = yield
