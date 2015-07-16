@@ -17,3 +17,5 @@
     %br/
     = f.password_field :password_confirmation
   = f.submit 'Sign Up', class: 'btn btn-default'
+  %span.login
+    Already have an account? #{link_to 'Sign in', login_path}.

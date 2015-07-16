@@ -9,3 +9,5 @@
     %br/
     = f.password_field :password
   = f.submit 'Sign In', class: 'btn btn-default'
+  %span.login
+    Don't have an account? #{link_to 'Sign up!', sign_up_path}.

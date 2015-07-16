@@ -11,3 +11,4 @@ en:
         failure: "There was a problem logging in with those credentials."
       destroy:
         success: "Come back soon!"
+      unauthenticated: "Please sign in to view that page."
