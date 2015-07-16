@@ -12,3 +12,14 @@ en:
       destroy:
         success: "Come back soon!"
       unauthenticated: "Please sign in to view that page."
+  note:
+    flash:
+      create:
+        success: "Your note has been created!"
+        failure: "There was a problem creating your note."
+      update:
+        success: "Saved!"
+        failure: "There was a problem saving your changes."
+      destroy:
+        success: "That note has been deleted."
+        failure: "We weren't able to delete that note."
