@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %title Nevernote
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body#welcome
+    .container.wrap
+      .row
+        .col-xs-12
+          %header
+            .well
+              Nevernote
+        .container
+          .row
+            .col-xs-12
+              %main
+                = flash_messages(flash)
+                = yield

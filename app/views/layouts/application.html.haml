@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title Elevennote
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    .container.wrap
+      .row
+        .col-xs-12
+          %header
+            .well
+              ElevenNote
+              \#{link_to 'Sign Up', sign_up_path}
+        .container
+          .row
+            .col-xs-4
+              %nav#sidebar
+                .well
+                  SIDEBAR
+            .col-xs-8
+              %main
+                .well
+                  = flash_messages(flash)
+                  = yield
