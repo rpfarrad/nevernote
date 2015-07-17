@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   get    'login'  => 'sessions#new'
 
   resources :notes, except: :edit
+
+  namespace :api do
+    namespace :v1 do
+      resources :notes, except: [:new, :edit]
+    end
+  end
 end
