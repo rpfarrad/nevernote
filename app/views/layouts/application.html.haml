@@ -24,6 +24,9 @@
           .row
             .col-xs-4
               %nav#sidebar
+                = link_to new_note_path, class: 'new-note btn btn-default' do
+                  %i.fa.fa-plus-circle
+                  New Note
                 = render 'notes/list', notes: @notes
             .col-xs-8
               %main

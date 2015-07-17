@@ -8,11 +8,11 @@ class NotesController < ApplicationController
   end
 
   def new
-    @note = Note.new
+    @note = current_user.notes.new
   end
 
   def create
-    @note = Note.new note_params
+    @note = current_user.notes.new note_params
     set_flash_for @note.save
     render_or_redirect
   end
@@ -49,11 +49,12 @@ class NotesController < ApplicationController
     if @note.errors.any?
       render :edit
     else
-      redirect_to @note
+      redirect_to redirection_path
     end
   end
 
-  def load_notes
-    @notes = Note.all
+  def redirection_path
+    return @note if @note.persisted?
+    new_note_path
   end
 end

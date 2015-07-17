@@ -15,4 +15,8 @@ class ApplicationController < ActionController::Base
       redirect_to login_path, :'alert-danger' => t('session.flash.unauthenticated')
     end
   end
+
+  def load_notes
+    @notes = current_user.notes.all if current_user.present?
+  end
 end
